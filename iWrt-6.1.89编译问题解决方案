@@ -1,0 +1,11 @@
+一、shadowsocksr-libev编译显示MBEDTLS*编译失败(原因：ssr-libev最高的支持mbedtls版本为2.28.x,而iWrt默认mbedtls版本为3.x版)
+	解决方案：将mbedtls-2.28.7源码包放入immortalwrt->package->libs目录下即可(注意删除3.x版的mbedtls)
+
+二、解决shadowsocksr-libev缺少libpcre依赖警告(原因：ssr-libev最高的支持libpcre版本为8.45.x.ximmortalwrt-6.1.89版默认pcre2版本10.x版)
+	解决方案：将pcre编译源码包放入immortalwrt->package->libs目录下即可
+
+三、默认下载更改破解线程(256)版本的aria2-1.37.0版本(默认增加了Config.in文件,从git.openwrt.org提取文件)
+	解决方案：将修改后的aria2编译文件源码放入immortalwrt->feeds->packages->net->aria2
+
+四、ariaNG升级成最新版本1.37.0
+	解决方案：将修改后的ariang源码包文件放入immortalwrt->feeds->packages->net文件夹中替换即可
